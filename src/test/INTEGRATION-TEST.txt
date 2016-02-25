@@ -57,14 +57,14 @@ Steps to follow in setting integration test.
    ii)  Navigate to the URL "https://{subdomain}.sirportly.com/admin/teams", obtain the ID of default team(By hovering on top of the team name, the team id will be appear at the bottom of the page.).
    iii) Navigate to the URL "https://{subdomain}.sirportly.com/admin/brands", obtain the ID of default brand(By hovering on top of the brand name, the brand id will be appear at the bottom of the page.).
    iv)  Navigate to the URL "https://{subdomain}.sirportly.com/admin/filters", create a new filter as below and obtain the ID of that filter(By hovering on top of the filter name, the filter id will be appear at the bottom of the page).
-			- Ticket 'Priority' is the priority value which you give under Step 8 (vi).
-			- Ticket 'Status' is the ticketStatus value which you give under Step 8 (xi).
+            - Ticket 'Priority' is the priority value which you give under Step 8 (vi).
+            - Ticket 'Status' is the ticketStatus value which you give under Step 8 (xi).
    v)   Navigate to the URL "https://{subdomain}.sirportly.com/admin/statuses", obtain an ID of default status(By hovering on top of the status name, the status id will be appear at the bottom of the page.).
    vi)  Navigate to the URL "https://{subdomain}.sirportly.com/admin/priorities", obtain the IDs of default priorities(By hovering on top of the priority name, the priority id will be appear at the bottom of the page.).
    vii) Navigate to the URL "https://{subdomain}.sirportly.com/admin/users", create two new users and obtain the IDs of those users(By hovering on top of the user name, the user id will be appear at the bottom of the page.). Make sure that both of these users are members of the team which is created under 7 ii).
    
    Note: - It is essential that both the Departments (Step 7 i) should belong to the same Brand (Step 7 iii) that is considered for the integration test.
-		 - Both the Users that are created for the integration (Step 7 vii) must belong to the same Team (Step 7 ii) that is considered for the integration.	 
+         - Both the Users that are created for the integration (Step 7 vii) must belong to the same Team (Step 7 ii) that is considered for the integration.
 
  7. Update the Sirportly properties file at location "<SIRPORTLY_CONNECTOR_HOME>/src/test/resources/artifacts/ESB/connector/config" as below.
 
