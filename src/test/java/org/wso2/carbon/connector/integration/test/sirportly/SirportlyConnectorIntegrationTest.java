@@ -44,7 +44,7 @@ public class SirportlyConnectorIntegrationTest extends ConnectorIntegrationTestB
     @BeforeClass(alwaysRun = true)
     public void setEnvironment() throws Exception {
     
-        init("sirportly-connector-1.0.0");
+        init("sirportly-connector-1.0.1-SNAPSHOT");
         
         esbRequestHeadersMap = new HashMap<String, String>();
         apiRequestHeadersMap = new HashMap<String, String>();
