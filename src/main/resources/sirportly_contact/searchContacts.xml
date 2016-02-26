@@ -27,24 +27,24 @@
         <property expression="$func:types" name="uri.var.types"/>
         <script language="js">
             <![CDATA[
-         var query = mc.getProperty('uri.var.query');
-         var limit = mc.getProperty('uri.var.limit');
-         var types = mc.getProperty('uri.var.types');
-         var apiParameters = "";
-         if (query != null && query != "") {
-            apiParameters += "query=" + query + '&';
-         }
-         if (limit != null && limit != "") {
-            apiParameters += "limit=" + limit + '&';
-         }
-         if (types != null && types != "") {
-            apiParameters += "types=" + types + '&';
-         }
-         if (apiParameters != "") {
-            apiParameters = '?' + apiParameters.substring(0, apiParameters.length - 1);
-            mc.setProperty('uri.var.apiParameters', apiParameters);
-         } 
-         ]]>
+             var query = mc.getProperty('uri.var.query');
+             var limit = mc.getProperty('uri.var.limit');
+             var types = mc.getProperty('uri.var.types');
+             var apiParameters = "";
+             if (query != null && query != "") {
+                apiParameters += "query=" + query + '&';
+             }
+             if (limit != null && limit != "") {
+                apiParameters += "limit=" + limit + '&';
+             }
+             if (types != null && types != "") {
+                apiParameters += "types=" + types + '&';
+             }
+             if (apiParameters != "") {
+                apiParameters = '?' + apiParameters.substring(0, apiParameters.length - 1);
+                mc.setProperty('uri.var.apiParameters', apiParameters);
+             }
+             ]]>
         </script>
         <!-- Content-Type header is not accepted by the API -->
         <header name="Content-Type" scope="transport" action="remove"/>

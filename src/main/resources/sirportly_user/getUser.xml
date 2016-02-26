@@ -27,7 +27,7 @@
             if (user != null && user != "") {
                mc.setProperty('uri.var.user', user);
             }            
-         ]]>
+            ]]>
         </script>
         <!-- Content-Type header is not accepted by the API -->
         <header name="Content-Type" scope="transport" action="remove"/>

@@ -39,21 +39,21 @@
         </payloadFactory>
         <script language="js">
             <![CDATA[
-         var payload = mc.getPayloadJSON();       
-         var contactMethodType = mc.getProperty('uri.var.contactMethodType');
-         var contactData = mc.getProperty('uri.var.contactData');
-         var isDefault = mc.getProperty('uri.var.isDefault');        
-         if (contactMethodType != null && contactMethodType != "") {
-            payload.method_type = contactMethodType;
-         }
-         if (contactData != null && contactData != "") {
-            payload.data = contactData;
-         }
-         if (isDefault != null && isDefault != "") {
-            payload ["default"] = isDefault;
-         }
-         mc.setPayloadJSON(payload);
-      ]]>
+             var payload = mc.getPayloadJSON();
+             var contactMethodType = mc.getProperty('uri.var.contactMethodType');
+             var contactData = mc.getProperty('uri.var.contactData');
+             var isDefault = mc.getProperty('uri.var.isDefault');
+             if (contactMethodType != null && contactMethodType != "") {
+                 payload.method_type = contactMethodType;
+             }
+             if (contactData != null && contactData != "") {
+                 payload.data = contactData;
+             }
+             if (isDefault != null && isDefault != "") {
+                 payload ["default"] = isDefault;
+             }
+             mc.setPayloadJSON(payload);
+            ]]>
         </script>
 
         <property name="messageType" value="application/x-www-form-urlencoded" scope="axis2"/>

@@ -33,40 +33,40 @@
         <property expression="$func:priority" name="uri.var.priority"/>
         <script language="js">
             <![CDATA[
-         var payload ={};            
-         var contactName = mc.getProperty('uri.var.contactName');
-         var contactReference = mc.getProperty('uri.var.contactReference');
-         var company = mc.getProperty('uri.var.company');
-         var pin = mc.getProperty('uri.var.pin');
-         var sla = mc.getProperty('uri.var.sla');
-         var priority = mc.getProperty('uri.var.priority');
-         if (contactName != null && contactName != "") {
-            payload.name = contactName;
-         }
-         if (contactReference != null && contactReference != "") {
-            payload.reference = contactReference;
-         }
-         if (company != null && company != "") {
-            payload.company = company;
-         }
-         if (pin != null && pin != "") {
-            payload.pin = pin;
-         }
-         if (sla != null && sla != "") {
-            payload.sla = sla;
-         }
-         if (priority != null && priority != "") {
-            payload.priority = priority;
-         }        
-         // Check whether any parameter exists in the payload.
-         for(var prop in payload) {
-            if (payload.hasOwnProperty(prop)) {
-               mc.setProperty('uri.var.isPayloadParamsExist', "true");
-               break;
-            }
-         }
-         mc.setPayloadJSON(payload);
-      ]]>
+             var payload ={};
+             var contactName = mc.getProperty('uri.var.contactName');
+             var contactReference = mc.getProperty('uri.var.contactReference');
+             var company = mc.getProperty('uri.var.company');
+             var pin = mc.getProperty('uri.var.pin');
+             var sla = mc.getProperty('uri.var.sla');
+             var priority = mc.getProperty('uri.var.priority');
+             if (contactName != null && contactName != "") {
+                payload.name = contactName;
+             }
+             if (contactReference != null && contactReference != "") {
+                payload.reference = contactReference;
+             }
+             if (company != null && company != "") {
+                payload.company = company;
+             }
+             if (pin != null && pin != "") {
+                payload.pin = pin;
+             }
+             if (sla != null && sla != "") {
+                payload.sla = sla;
+             }
+             if (priority != null && priority != "") {
+                payload.priority = priority;
+             }
+             // Check whether any parameter exists in the payload.
+             for(var prop in payload) {
+                if (payload.hasOwnProperty(prop)) {
+                   mc.setProperty('uri.var.isPayloadParamsExist', "true");
+                   break;
+                }
+             }
+             mc.setPayloadJSON(payload);
+            ]]>
         </script>
         <filter xpath="boolean(get-property('uri.var.isPayloadParamsExist'))">
             <then>
