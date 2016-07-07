@@ -65,7 +65,7 @@
                queryString += "raw=" + isRawTicket + '&';
             }
             if (queryString != "") {
-               queryString = '?' + queryString.substring(0, queryString.length - 1);
+               queryString = '?' + queryString.toString().substring(0, queryString.toString().lastIndexOf("&"));
                mc.setProperty('uri.var.queryString', queryString);
             }
          ]]>
