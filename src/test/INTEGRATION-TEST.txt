@@ -58,12 +58,12 @@ Steps to follow in setting integration test.
             - Ticket 'Status' is the ticketStatus value which you give under Step 6 (xi).
    v)   Navigate to the URL "https://{subdomain}.sirportly.com/admin/statuses", obtain an ID of default status(By hovering on top of the status name, the status id will be appear at the bottom of the page.).
    vi)  Navigate to the URL "https://{subdomain}.sirportly.com/admin/priorities", obtain the IDs of default priorities(By hovering on top of the priority name, the priority id will be appear at the bottom of the page.).
-   vii) Navigate to the URL "https://{subdomain}.sirportly.com/admin/users", create two new users and obtain the IDs of those users(By hovering on top of the user name, the user id will be appear at the bottom of the page.). Make sure that both of these users are members of the team which is created under 7 ii).
+   vii) Navigate to the URL "https://{subdomain}.sirportly.com/admin/users", create two new users and obtain the IDs of those users(By hovering on top of the user name, the user id will be appear at the bottom of the page.). Make sure that both of these users are members of the team which is created under 5 ii).
    
-   Note: - It is essential that both the Departments (Step 6 i) should belong to the same Brand (Step 6 iii) that is considered for the integration test.
-         - Both the Users that are created for the integration (Step 6 vii) must belong to the same Team (Step 6 ii) that is considered for the integration.
+   Note: - It is essential that both the Departments (Step 5 i) should belong to the same Brand (Step 5 iii) that is considered for the integration test.
+         - Both the Users that are created for the integration (Step 5 vii) must belong to the same Team (Step 5 ii) that is considered for the integration.
 
- 7. Update the Sirportly properties file at location "<SIRPORTLY_CONNECTOR_HOME>/src/test/resources/artifacts/ESB/connector/config" as below.
+ 6. Update the Sirportly properties file at location "<SIRPORTLY_CONNECTOR_HOME>/src/test/resources/artifacts/ESB/connector/config" as below.
 
    i)     apiUrl                 - Use https://{subdomain}.sirportly.com.
    ii)    apiToken               - Use the API Token obtained under Step 2 ii).
@@ -73,7 +73,7 @@ Steps to follow in setting integration test.
    vi)    priority               - Use "Low", "High", "Urgent" or "Normal" as the value.
    vii)   email                  - Use any email address which is correctly formatted.
    viii)  contactType            - Use "email" as the value of this property.
-   ix)    userId                 - Use a user Id obtained under step 7 vii).
+   ix)    userId                 - Use a user Id obtained under step 6 vii).
    x)     ticketSubject          - Use a valid string as the ticket subject.
    xi)    ticketStatus           - Use "New", "Resolved", "Waiting for Contact" or "Waiting for Staff" as the value.
    xii)   department             - Use a department Id obtained under step 5 i).
@@ -92,5 +92,5 @@ Steps to follow in setting integration test.
         
    Note - The property values of contactReference and email should be changed to unique different values for each integration execution.  
 
- 8.Navigate to "<SIRPORTLY_CONNECTOR_HOME>/" and run the following command.
+ 7.Navigate to "<SIRPORTLY_CONNECTOR_HOME>/" and run the following command.
       $ mvn clean install
